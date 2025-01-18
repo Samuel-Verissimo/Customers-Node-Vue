@@ -33,7 +33,7 @@ Certifique-se de ter instalado:
 2. **Suba os containers com Docker Compose**
 
    ```bash
-   docker-compose up build
+   docker-compose build
    docker-compose up -d
    ```
 
@@ -80,14 +80,18 @@ Certifique-se de ter instalado:
 
 ## 🌟 Melhorias Futuras
 
-1. **Autenticação JWT**:
+1. **Tratativas de Campos**:
+   - Implementar validações mais robustas no backend para assegurar que os dados inseridos estejam no formato correto.
+   - Adicionar mensagens de erro específicas para campos obrigatórios ou com formatos inválidos.
+
+2. **Autenticação JWT**:
    - Implementar autenticação para proteger os endpoints, garantindo que apenas usuários autorizados possam acessar a aplicação.
 
-2. **Upload de Arquivos**:
+3. **Upload de Arquivos**:
    - Adicionar suporte para upload de arquivos (ex.: fotos ou documentos relacionados aos clientes), armazenando-os no servidor ou em um serviço de armazenamento em nuvem.
 
-3. **Paginação no Backend**:
+4. **Paginação no Backend**:
    - Melhorar a performance implementando paginação diretamente no backend, em vez de apenas no frontend.
 
-4. **Notificações em Tempo Real**:
+5. **Notificações em Tempo Real**:
    - Adicionar notificações em tempo real usando WebSockets para alertar os usuários sobre mudanças na base de dados.

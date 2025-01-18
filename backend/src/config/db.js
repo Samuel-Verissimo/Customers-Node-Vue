@@ -30,23 +30,23 @@ async function initDB() {
   const pool = await getDBConnection();
   await pool.query(`
     CREATE TABLE IF NOT EXISTS clients (
-      id BIGINT PRIMARY KEY AUTO_INCREMENT,
+      ID BIGINT PRIMARY KEY AUTO_INCREMENT,
       idUsuario BIGINT,
-      dataHoraCadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
-      codigo VARCHAR(15),
-      nome VARCHAR(150),
-      cpf_cnpj VARCHAR(20),
-      cep INT,
-      logradouro VARCHAR(100),
-      endereco VARCHAR(120),
-      numero VARCHAR(20),
-      bairro VARCHAR(50),
-      cidade VARCHAR(60),
-      uf VARCHAR(2),
-      complemento VARCHAR(150),
-      fone VARCHAR(15),
-      limiteCredito FLOAT,
-      validade DATE
+      DataHoraCadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
+      Codigo VARCHAR(15),
+      Nome VARCHAR(150),
+      CPF_CNPJ VARCHAR(20),
+      CEP INT,
+      Logradouro VARCHAR(100),
+      Endereco VARCHAR(120),
+      Numero VARCHAR(20),
+      Bairro VARCHAR(50),
+      Cidade VARCHAR(60),
+      UF VARCHAR(2),
+      Complemento VARCHAR(150),
+      Fone VARCHAR(15),
+      LimiteCredito FLOAT,
+      Validade DATE
     );
   `);
 }
