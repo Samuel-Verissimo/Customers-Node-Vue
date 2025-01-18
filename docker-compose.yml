@@ -1,0 +1,51 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: db_quality
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: database_quality
+      MYSQL_USER: user_quality
+      MYSQL_PASSWORD: pass_quality
+    ports:
+      - "3307:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: node_api
+    ports:
+      - "3001:3000"
+    environment:
+      DB_HOST: db
+      DB_USER: user_quality
+      DB_PASSWORD: pass_quality
+      DB_NAME: database_quality
+    depends_on:
+      db:
+        condition: service_healthy 
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: vue
+    ports:
+      - "85:8080"
+    volumes:
+    - ./frontend:/app
+    - /app/node_modules
+    command: npm run serve
+    depends_on:
+      - backend
+
+volumes:
+  dbdata:
