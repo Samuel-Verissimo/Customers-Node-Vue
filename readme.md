@@ -33,7 +33,7 @@ Certifique-se de ter instalado:
 2. **Suba os containers com Docker Compose**
 
    ```bash
-   docker-compose up --build
+   docker-compose up --build -d
    ```
 
 3. **Acesse a aplicação**
