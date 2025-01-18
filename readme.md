@@ -10,6 +10,8 @@ Uma aplicação completa para gerenciamento de clientes, construída com **Vue 3
 - **Integração**: ViaCEP 
 - **Containerização**: Docker e Docker Compose
 
+---
+
 ## 🛠️ Configuração e Execução
 
 ### Pré-requisitos
@@ -21,16 +23,25 @@ Certifique-se de ter instalado:
 
 ### Passo a Passo
 
-# 1. Clone o repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+1. **Clone o repositório**
 
-# 2. Suba os containers com Docker Compose
-docker-compose up --build
+   ```bash
+   git clone https://github.com/seu-usuario/seu-repositorio.git
+   cd seu-repositorio
+   ```
 
-# 3. Acesse a aplicação
-# - Frontend: http://localhost:85
-# - Backend (API): http://localhost:3001/api/v1/clients
+2. **Suba os containers com Docker Compose**
+
+   ```bash
+   docker-compose up --build
+   ```
+
+3. **Acesse a aplicação**
+
+   - **Frontend**: [http://localhost:85](http://localhost:85)
+   - **Backend** (API): [http://localhost:3001/api/v1/clients](http://localhost:3001/api/v1/clients)
+
+---
 
 ## 🔥 Endpoints Disponíveis
 
@@ -63,6 +74,8 @@ docker-compose up --build
   "LimiteCredito": 5000.50,
   "Validade": "2025-12-31"
 }
+```
+---
 
 ## 🌟 Melhorias Futuras
 
@@ -77,7 +90,3 @@ docker-compose up --build
 
 4. **Notificações em Tempo Real**:
    - Adicionar notificações em tempo real usando WebSockets para alertar os usuários sobre mudanças na base de dados.
-
-5. **Dashboard Resumido**:
-   - Criar uma página inicial com gráficos e estatísticas sobre os clientes, como quantidade de registros e créditos totais.
-
