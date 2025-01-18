@@ -26,8 +26,8 @@ Certifique-se de ter instalado:
 1. **Clone o repositório**
 
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
+   git clone git@github.com:Samuel-Verissimo/Customers-Node-Vue.git
+   cd Customers-Node-Vue
    ```
 
 2. **Suba os containers com Docker Compose**
